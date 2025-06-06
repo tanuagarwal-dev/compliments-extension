@@ -1,0 +1,18 @@
+{
+    "name": "Compliment-generator",
+    "version" : "0.0.1",
+    "manifest_version":  3,
+    "description": "a sweet surprise every time",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icons8-cute-48.png"
+    },
+    "icons": {
+        "128" : "icons8-cute-96.png",
+        "64": "icons8-cute-48.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": ["activeTab", "notifications", "alarms", "http://localhost:5000/", "storage"]
+}

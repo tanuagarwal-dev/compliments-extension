@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complements</title>
+    <link rel="stylesheet" href="popup.css" />
+</head>
+<body id="body">
+    
+    <div id="root" class="default">
+        <div id="theme"><span>🌈</span>
+        <span class="tooltip-text">Change Theme</span></div>
+        <img src="icons8-cute-100.png" alt="icon" id="icon" />
+    <p id="comps">load...</p>
+    
+    <div class="buttons">
+        <button id="save-fav">❤️ Save to Favorites</button>
+        <button id="share">📤</button>
+        <div id="popup" class="share-popup hidden">
+    <button id="copy-btn">📋 Copy</button>
+    <button id="whatsapp-btn">💬 WhatsApp</button>
+    <button id="insta-btn">📸 Insta Story</button>
+  </div>
+    </div>
+
+    <div>
+        <p id="text">What's the mood today?</p>
+        <!-- <input type="text" id="input" placeholder="Enter mood here..." /> -->
+       
+
+
+        <ul id="mood-list">
+            <li data-mood="flirty">flirty</li>
+            <li data-mood="compliment" class="selected">compliment</li>
+            <li data-mood="jokes">jokes</li>
+            <li data-mood="gratitude">gratitude</li>
+            <li data-mood="prayer">prayer</li>
+            <li data-mood="motivation">motivation</li>
+        </ul>
+    </div>
+    <button id="new-comp">Get Message</button>
+    <div>
+        <h3>🔖 Your Personal Favorites: <span id="reset">(Reset)</span>
+        </h3>
+        <ul id="fav-list">
+    </ul>
+    </div>
+    
+    <p id="streak">🔥Streak: --</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+body {
+  font-family: 'Comic Sans MS', cursive, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #5a005a;
+  border-radius: 12px;
+ 
+}
+
+#root { 
+  margin: 0;
+  padding: 20px;
+  color: #5a005a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 360px;
+  min-height: 200px;
+}
+
+#comps {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  min-height: 40px;
+  margin: 10px 0;
+  padding: 10px;
+  /* background-color: #fff8fc; */
+  border: 2px dashed #e59ec4;
+  border-radius: 10px;
+  text-align: center;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  background-color: #ffccf9;
+  border: none;
+  border-radius: 5px;
+  /* color: white; */
+  /* transition: background-color 0.3s ease; */
+  
+  font-weight: bold;
+  color: #6b006b;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background-color: #ffc1f7;
+}
+
+#theme{
+  position: absolute;
+  top: 1rem;
+  right:0;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  display: inline-block;
+  cursor: pointer;
+}
+.tooltip-text{
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px ;
+  position: absolute;
+  z-index: 1;
+  bottom: 60%;
+  font-size: 0.7rem;
+  left: 0%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+#theme:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+#Mood-list, ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* background-color: #ffffff; */
+}
+
+#text{
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  /* color: #6b006b; */
+}
+
+ul#mood-list li {
+  padding: 0.5rem 0.8rem;
+  margin: 0.2rem 0;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #fce4ec;
+  transition: background-color 0.3s ease;
+  color: #6b006b;
+}
+
+ul#mood-list li:hover {
+  background-color: #f8bbd0;
+}
+
+ul#mood-list li.selected {
+  background-color: #ec407a;
+  color: white;
+  font-weight: bold;
+}
+
+ul#fav-list{
+  padding: 0.5rem 0.8rem;
+  margin: 0.2rem 0;
+  transition: background 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  border: 2px solid;
+  
+}
+ul#fav-list li.fav-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+ul#fav-list .fav-text {
+  flex: 1;
+  text-align: left;
+}
+ul#fav-list .delete-btn {
+  cursor: pointer;
+  padding: 2px 6px;
+  font-size: 12px;
+  color: red;
+  transition: color 0.3s;
+}
+
+#reset{
+  cursor: pointer;
+}
+
+
+/* Compliment container base */
+/* #comps {
+  padding: 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+} */
+
+/* Themes */
+.theme-soft {
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+}
+
+.theme-bold {
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  /* color: white; */
+}
+
+.default{
+  background: linear-gradient(to bottom right, #fff1f8, #ffe6fa); 
+}
+
+.theme-techie {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  /* color: white; */
+}
+#root.theme-techie, #root.theme-techie text, #root.theme-calm, #root.theme-calm text, #root.theme-bold text, #root.theme-bold{
+  color: white;
+
+}
+
+.theme-glam {
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  /* color: white; */
+}
+
+.theme-romantic {
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  /* color: white; */
+}
+
+.theme-calm {
+  background: linear-gradient(to right, #43cea2, #185a9d);
+  /* color: white; */
+}
+
+
+
+.buttons{
+  position: relative;
+  display: inline-block;
+}
+
+.share-popup{
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #222;
+  color: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hidden{
+  display: none;
+}
+
+.share-popup button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 2px 8px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background 0.2s;
+}
+
+.share-popup button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
